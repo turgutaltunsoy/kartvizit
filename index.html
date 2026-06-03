@@ -1,127 +1,363 @@
 <!DOCTYPE html>
 <html lang="tr">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Turgut Altunsoy - Muhasebeci</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Metela Danışmanlık | Strateji • Vizyon • Sonuç</title>
 
-  <style>
-    :root {
-      --bg: #f5f7fa;
-      --card: #ffffff;
-      --text: #111;
-      --subtext: #666;
-      --accent: #2d6cdf;
-    }
+<style>
 
-    body.dark {
-      --bg: #0f172a;
-      --card: #1e293b;
-      --text: #f1f5f9;
-      --subtext: #94a3b8;
-      --accent: #38bdf8;
-    }
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+scroll-behavior:smooth;
+}
 
-    body {
-      margin: 0;
-      font-family: Arial, sans-serif;
-      background: var(--bg);
-      color: var(--text);
-      height: 100vh;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      transition: 0.3s;
-    }
+body{
+font-family:Segoe UI,Arial,sans-serif;
+background:#08111f;
+color:white;
+line-height:1.6;
+}
 
-    .card {
-      background: var(--card);
-      padding: 25px;
-      border-radius: 16px;
-      width: 320px;
-      text-align: center;
-      box-shadow: 0 10px 25px rgba(0,0,0,0.15);
-      position: relative;
-    }
+header{
+position:fixed;
+top:0;
+left:0;
+width:100%;
+padding:15px 8%;
+display:flex;
+justify-content:space-between;
+align-items:center;
+background:rgba(8,17,31,.95);
+backdrop-filter:blur(8px);
+z-index:1000;
+}
 
-    .name {
-      font-size: 22px;
-      font-weight: bold;
-    }
+.logo img{
+height:70px;
+}
 
-    .title {
-      color: var(--subtext);
-      margin-bottom: 15px;
-    }
+nav a{
+color:white;
+text-decoration:none;
+margin-left:25px;
+font-size:15px;
+transition:.3s;
+}
 
-    .info {
-      font-size: 14px;
-      margin: 6px 0;
-      color: var(--subtext);
-    }
+nav a:hover{
+color:#d4af37;
+}
 
-    .qr {
-      margin-top: 15px;
-    }
+.hero{
+min-height:100vh;
+display:flex;
+align-items:center;
+justify-content:center;
+text-align:center;
+padding:120px 20px 50px;
+background:
+linear-gradient(rgba(8,17,31,.85),rgba(8,17,31,.85)),
+url('https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?auto=format&fit=crop&w=1600&q=80');
+background-size:cover;
+background-position:center;
+}
 
-    .qr img {
-      width: 120px;
-      height: 120px;
-      border-radius: 10px;
-    }
+.hero-content{
+max-width:900px;
+}
 
-    .button {
-      margin-top: 15px;
-      display: inline-block;
-      padding: 10px 12px;
-      background: var(--accent);
-      color: white;
-      border-radius: 8px;
-      text-decoration: none;
-      font-size: 14px;
-    }
+.hero h1{
+font-size:60px;
+margin-bottom:20px;
+color:#d4af37;
+}
 
-    .toggle {
-      position: absolute;
-      top: 10px;
-      right: 10px;
-      cursor: pointer;
-      font-size: 12px;
-      padding: 6px 10px;
-      border-radius: 8px;
-      background: var(--accent);
-      color: white;
-      border: none;
-    }
-  </style>
+.hero p{
+font-size:22px;
+color:#d7d7d7;
+margin-bottom:35px;
+}
+
+.btn{
+display:inline-block;
+padding:15px 35px;
+background:#d4af37;
+color:#08111f;
+text-decoration:none;
+font-weight:bold;
+border-radius:8px;
+transition:.3s;
+}
+
+.btn:hover{
+transform:translateY(-3px);
+}
+
+section{
+padding:100px 10%;
+}
+
+.section-title{
+text-align:center;
+font-size:42px;
+margin-bottom:50px;
+color:#d4af37;
+}
+
+.about{
+max-width:900px;
+margin:auto;
+text-align:center;
+font-size:18px;
+color:#ddd;
+}
+
+.services{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+gap:25px;
+}
+
+.card{
+background:#0f1b2f;
+padding:30px;
+border-radius:15px;
+border:1px solid rgba(212,175,55,.25);
+transition:.3s;
+}
+
+.card:hover{
+transform:translateY(-8px);
+}
+
+.card h3{
+color:#d4af37;
+margin-bottom:15px;
+}
+
+.card p{
+color:#ddd;
+}
+
+.stats{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(200px,1fr));
+gap:20px;
+text-align:center;
+}
+
+.stat{
+background:#0f1b2f;
+padding:30px;
+border-radius:15px;
+}
+
+.stat h3{
+font-size:40px;
+color:#d4af37;
+}
+
+.contact{
+text-align:center;
+}
+
+.contact-box{
+background:#0f1b2f;
+max-width:700px;
+margin:auto;
+padding:40px;
+border-radius:15px;
+}
+
+.contact p{
+margin:15px 0;
+font-size:18px;
+}
+
+footer{
+background:#050b15;
+text-align:center;
+padding:30px;
+color:#aaa;
+}
+
+.whatsapp{
+position:fixed;
+bottom:25px;
+right:25px;
+width:65px;
+height:65px;
+border-radius:50%;
+background:#25D366;
+display:flex;
+align-items:center;
+justify-content:center;
+font-size:30px;
+text-decoration:none;
+color:white;
+box-shadow:0 10px 20px rgba(0,0,0,.3);
+}
+
+@media(max-width:768px){
+
+.hero h1{
+font-size:38px;
+}
+
+.hero p{
+font-size:18px;
+}
+
+nav{
+display:none;
+}
+
+.logo img{
+height:55px;
+}
+
+}
+
+</style>
 </head>
 
 <body>
 
-  <div class="card">
+<header>
 
-    <button class="toggle" onclick="toggleDark()">🌙 / ☀️</button>
+<div class="logo">
+<img src="logo.png" alt="Metela Danışmanlık">
+</div>
 
-    <div class="name">Turgut Altunsoy</div>
-    <div class="title">Muhasebeci</div>
+<nav>
+<a href="#hakkimizda">Hakkımızda</a>
+<a href="#hizmetler">Hizmetler</a>
+<a href="#iletisim">İletişim</a>
+</nav>
 
-    <div class="info">📧 turgut@example.com</div>
-    <div class="info">📞 +90 555 555 55 55</div>
-    <div class="info">📍 Türkiye</div>
+</header>
 
-    <a class="button" href="GITHUB_LINK" target="_blank">GitHub Profil</a>
+<section class="hero">
 
-    <div class="qr">
-      <img src="QR_CODE_URL" alt="QR Kod">
-    </div>
+<div class="hero-content">
 
-  </div>
+<h1>Metela Danışmanlık</h1>
 
-  <script>
-    function toggleDark() {
-      document.body.classList.toggle("dark");
-    }
-  </script>
+<p>
+İşletmenizin finansal süreçlerini güvenle yönetin.
+Muhasebe, vergi ve mali danışmanlık alanlarında
+profesyonel çözümler sunuyoruz.
+</p>
+
+<a href="#iletisim" class="btn">Bizimle İletişime Geçin</a>
+
+</div>
+
+</section>
+
+<section id="hakkimizda">
+
+<h2 class="section-title">Hakkımızda</h2>
+
+<div class="about">
+
+<p>
+Metela Danışmanlık, İzmir merkezli bir muhasebe ve mali danışmanlık
+firmasıdır. Kurucusu Turgut Altunsoy'un tecrübesi ile şirketlere,
+girişimcilere ve profesyonellere güvenilir finansal rehberlik sunmaktadır.
+</p>
+
+</div>
+
+</section>
+
+<section>
+
+<h2 class="section-title">Neden Biz?</h2>
+
+<div class="stats">
+
+<div class="stat">
+<h3>%100</h3>
+<p>Güven Odaklı Hizmet</p>
+</div>
+
+<div class="stat">
+<h3>7/24</h3>
+<p>Profesyonel Destek</p>
+</div>
+
+<div class="stat">
+<h3>∞</h3>
+<p>Sürdürülebilir Çözüm</p>
+</div>
+
+</div>
+
+</section>
+
+<section id="hizmetler">
+
+<h2 class="section-title">Hizmetlerimiz</h2>
+
+<div class="services">
+
+<div class="card">
+<h3>Muhasebe Hizmetleri</h3>
+<p>Şirket muhasebesi ve mali kayıt süreçlerinin yönetimi.</p>
+</div>
+
+<div class="card">
+<h3>Vergi Danışmanlığı</h3>
+<p>Vergi planlaması ve mevzuata uygun süreç yönetimi.</p>
+</div>
+
+<div class="card">
+<h3>Şirket Kuruluşu</h3>
+<p>Yeni işletmeler için kuruluş ve danışmanlık hizmetleri.</p>
+</div>
+
+<div class="card">
+<h3>SGK ve Bordro</h3>
+<p>Personel bordrolama ve SGK işlemlerinin yürütülmesi.</p>
+</div>
+
+</div>
+
+</section>
+
+<section id="iletisim">
+
+<h2 class="section-title">İletişim</h2>
+
+<div class="contact-box">
+
+<p>📍 İzmir, Türkiye</p>
+
+<p>📞 +90 5XX XXX XX XX</p>
+
+<p>📧 info@meteladanismanlik.com</p>
+
+<p>
+Strateji • Vizyon • Sonuç
+</p>
+
+</div>
+
+</section>
+
+<footer>
+
+© 2026 Metela Danışmanlık | Tüm Hakları Saklıdır.
+
+</footer>
+
+<a class="whatsapp" href="#">
+💬
+</a>
 
 </body>
 </html>
