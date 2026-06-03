@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Turgut Altunsoy - Muhasebeci</title>
+
+  <style>
+    :root {
+      --bg: #f5f7fa;
+      --card: #ffffff;
+      --text: #111;
+      --subtext: #666;
+      --accent: #2d6cdf;
+    }
+
+    body.dark {
+      --bg: #0f172a;
+      --card: #1e293b;
+      --text: #f1f5f9;
+      --subtext: #94a3b8;
+      --accent: #38bdf8;
+    }
+
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      background: var(--bg);
+      color: var(--text);
+      height: 100vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      transition: 0.3s;
+    }
+
+    .card {
+      background: var(--card);
+      padding: 25px;
+      border-radius: 16px;
+      width: 320px;
+      text-align: center;
+      box-shadow: 0 10px 25px rgba(0,0,0,0.15);
+      position: relative;
+    }
+
+    .name {
+      font-size: 22px;
+      font-weight: bold;
+    }
+
+    .title {
+      color: var(--subtext);
+      margin-bottom: 15px;
+    }
+
+    .info {
+      font-size: 14px;
+      margin: 6px 0;
+      color: var(--subtext);
+    }
+
+    .qr {
+      margin-top: 15px;
+    }
+
+    .qr img {
+      width: 120px;
+      height: 120px;
+      border-radius: 10px;
+    }
+
+    .button {
+      margin-top: 15px;
+      display: inline-block;
+      padding: 10px 12px;
+      background: var(--accent);
+      color: white;
+      border-radius: 8px;
+      text-decoration: none;
+      font-size: 14px;
+    }
+
+    .toggle {
+      position: absolute;
+      top: 10px;
+      right: 10px;
+      cursor: pointer;
+      font-size: 12px;
+      padding: 6px 10px;
+      border-radius: 8px;
+      background: var(--accent);
+      color: white;
+      border: none;
+    }
+  </style>
+</head>
+
+<body>
+
+  <div class="card">
+
+    <button class="toggle" onclick="toggleDark()">🌙 / ☀️</button>
+
+    <div class="name">Turgut Altunsoy</div>
+    <div class="title">Muhasebeci</div>
+
+    <div class="info">📧 turgut@example.com</div>
+    <div class="info">📞 +90 555 555 55 55</div>
+    <div class="info">📍 Türkiye</div>
+
+    <a class="button" href="GITHUB_LINK" target="_blank">GitHub Profil</a>
+
+    <div class="qr">
+      <img src="QR_CODE_URL" alt="QR Kod">
+    </div>
+
+  </div>
+
+  <script>
+    function toggleDark() {
+      document.body.classList.toggle("dark");
+    }
+  </script>
+
+</body>
+</html>
